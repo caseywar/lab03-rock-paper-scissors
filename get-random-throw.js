@@ -5,10 +5,15 @@ export function getRandomThrow() {
 
     if (randomNumber === 1) {
         computersThrow = 'rock';
-    } else if (randomNumber === 2) {
+        return 'rock'
+    } 
+    else if (randomNumber === 2) {
         computersThrow = 'paper';
-    } else if (randomNumber === 3) {
+        return 'paper'
+    } 
+    else if (randomNumber === 3) {
         computersThrow = 'sissors';
+        return 'sissors'
     }
 
     return computersThrow;
