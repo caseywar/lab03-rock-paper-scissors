@@ -1,40 +1,45 @@
 // import functions and grab DOM elements
-import { getRandomThrow } from './get-random-throw.js';
+import { didUserWin, getRandomThrow } from './get-random-throw.js';
 
 const shootButton = document.getElementById('shoot-button');
 const matchResult = document.getElementById('match-result');
 const winsSpace = document.getElementById('wins');
 const losesSpace = document.getElementById('loses');
+const drawsSpace = document.getElementById('draws');
 const totalSpace = document.getElementById('total');
 
 
 
 // initialize state
 let wins = 0;
+let loses = 0;
+let draws = 0;
 let total = 0;
 
 // set event listeners to update state and DOM
 
 shootButton.addEventListener('click', () => {
     total++;
+    totalSpace.textContent = total;
 
-    //     1)store what the computer shot
-    //     -need a 'computer shoot' that lands randomly on RPS (1,2,3)
-    const computersShoot = Math.round(Math.random() * 3);
-    //     -math.round(Math.random()*3) will go between 1 and 3
-    const computerRockPaperSissors = getRandomThrow(computersShoot);
-    //     -make 1 rock and 2 paper 3 sissors
+    const computersChoice = getRandomThrow();
+    const checkedRadioButton = document.querySelector('input[type="radio"]:checked');
+    const usersChoice = checkedRadioButton.value;
+    const result = didUserWin(usersChoice, computersChoice);
 
-    // 2)store the user shoot
-    //     -grab the checked input and get its value
-    const selectedRadioInput = document.querySelector('input[type="radio"]:checked');
+    if (result === 'win') {
+        wins++;
+        matchResult.textContent = 'you win!';
+        winsSpace.textContent = wins;
+    } else if (result === 'lose') {
+        loses++
+        matchResult.textContent = 'you lost';
+        losesSpace.textContent = loses;
+    } else {
+        draws++
+        matchResult.textContent = 'issa draw';
+        drawsSpace.textContent = draws;
 
-    const usersShoot = selectedRadioInput.value;
-    // 3)compare the user shoot to computer shoot
-    if (usersShoot === computerRockPaperSissors) {
-        matchResult.textContent = 'DRAW';
     }
 
-    // 4)display the result of the match
-
-})
+});

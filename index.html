@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Monoton&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alef&family=Carter+One&family=Monoton&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+
+
+
     <title>Document</title>
 </head>
 
@@ -18,8 +29,12 @@
     </header>
     <main>
         <section class="main-section">
+            <span class="greeting">hello and welcome to the classic game of rock paper sissors</span> <br>
+            <span class="middle">Choose either the 'Rock Fact Rock', the 'Paper Warrior' or the '8bitsizzors' from
+                below. <br>
+                The results of the match againt the computer will be displayed below!</span>
             <label>
-                <input type="radio" name="shoot-option" value="rock">
+                <input type="radio" name="shoot-option" value="rock" checked>
                 <img src="assets/rock.png">
             </label>
             <label>
@@ -30,11 +45,13 @@
                 <input type="radio" name="shoot-option" value="sissors">
                 <img src="assets/sissors.png">
             </label>
+            <br>
             <button id="shoot-button">SHOOT</button>
-            <div>Computer's Throw: <span id="computer-throw"></span></div>
-            <div>Wins: <span id="wins"></span></div>
-            <div> Loses: <span id="loses"></span></div>
-            <div>Total: <span id="total"></span></div>
+            <div class="middle">Match Result: <span id="match-result"></span></div>
+            <div class="middle">Wins: <span id="wins"></span></div>
+            <div class="middle">Loses: <span id="loses"></span></div>
+            <div class="middle">Draws: <span id="draws"></span></div>
+            <div class="middle">Total: <span id="total"></span></div>
 
 
         </section>
