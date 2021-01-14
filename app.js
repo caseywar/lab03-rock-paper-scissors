@@ -10,6 +10,7 @@ const totalSpace = document.getElementById('total');
 
 
 
+
 // initialize state
 let wins = 0;
 let loses = 0;
@@ -43,3 +44,16 @@ shootButton.addEventListener('click', () => {
     }
 
 });
+
+// const resetButton = Document.getElementById('reset-button');
+// resetButton.addEventListener('click', () => {
+//     let wins = 0;
+//     let loses = 0;
+//     let draws = 0;
+//     let total = 0;
+//     winsSpace.textContent = wins;
+//     losesSpace.textContent = loses;
+//     drawsSpace.textContent = draws;
+//     totalSpace.textContent = total;
+
+// });

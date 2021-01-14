@@ -29,10 +29,24 @@
     </header>
     <main>
         <section class="main-section">
-            <span class="greeting">hello and welcome to the classic game of rock paper sissors</span> <br>
+            <span class="greeting">hello and welcome to the classic game of rock paper scissors</span> <br>
             <span class="middle">Choose either the 'Rock Fact Rock', the 'Paper Warrior' or the '8bitsizzors' from
                 below. <br>
-                The results of the match againt the computer will be displayed below!</span>
+                The rules are:
+                <ul>
+                    <li>
+                        paper beats rock
+                    </li>
+                    <li>
+                        rock beats scissors
+                    </li>
+                    <li>
+                        scissors beats paper
+                    </li>
+                </ul>
+                <br>
+                The results of the match againt the computer will be displayed below!
+            </span>
             <label>
                 <input type="radio" name="shoot-option" value="rock" checked>
                 <img src="assets/rock.png">
@@ -52,6 +66,8 @@
             <div class="middle">Loses: <span id="loses"></span></div>
             <div class="middle">Draws: <span id="draws"></span></div>
             <div class="middle">Total: <span id="total"></span></div>
+            <br>
+            <!-- <button id="reset-button">RESET</button> -->
 
 
         </section>
